@@ -22,6 +22,8 @@ def run():
     for element in super_list:
         print(element)
 
+    listaCienAlCuadrado = [num**2 for num in range(0,100)];
+    print(listaCienAlCuadrado)
 
 if __name__ == '__main__':
     run()
