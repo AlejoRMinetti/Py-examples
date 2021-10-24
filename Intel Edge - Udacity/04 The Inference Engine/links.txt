@@ -1,0 +1,3 @@
+https://www.intel.com/content/www/us/en/internet-of-things/industry-solutions.html
+https://hackernoon.com/the-ultimate-guide-to-starting-your-first-iot-project-8b0644fbbe6d
+https://www.pyimagesearch.com/2019/04/08/openvino-opencv-and-movidius-ncs-on-the-raspberry-pi/
