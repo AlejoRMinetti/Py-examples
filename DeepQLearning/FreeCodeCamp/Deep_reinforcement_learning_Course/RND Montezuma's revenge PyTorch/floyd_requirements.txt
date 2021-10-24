@@ -1,3 +1,0 @@
-tensorboardX
-gym
-gym-super-mario-bros

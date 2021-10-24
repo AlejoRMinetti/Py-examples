@@ -7,6 +7,7 @@
 ### Relational Databases - Udacity
 ### TensroFlow for Deep Learning - Udacity
 ### Intel Edge - Udacity
+### Deep Q Learning - Free Code Camp and others
 
 
 ### Pensamiento computacional - Platzi
