@@ -91,6 +91,20 @@ for x in thisdict.values():
 for x, y in thisdict.items():
 	print(x, y)
 
+# dictionary of dictionaries
+thisdict = { "1":{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}, "2":{
+  "brand": "Fiat",
+  "model": "Siena",
+  "year": 1999
+}}
+for x, y in thisdict.items():
+  # print(type(x))
+  print(x, y)
+
 # check key
 if "model" in thisdict:
 	print("Yes, 'model' is one of the keys in the thisdict dictionary")
