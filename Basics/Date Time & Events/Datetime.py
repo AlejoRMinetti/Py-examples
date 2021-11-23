@@ -17,3 +17,14 @@ print(x.strftime("%B")) # others in:
 # Para hacer operaciones usar: timedelta
 # https://www.programiz.com/python-programming/datetime
 
+# datetime in string format for may 25 1999
+input = '25/05/2021'
+  
+# format
+format = '%d/%m/%Y'
+  
+# convert from string format to datetime format
+datetime = datetime.datetime.strptime(input, format)
+  
+# print for mySQL format
+print(datetime.strftime('%Y-%m-%d'))

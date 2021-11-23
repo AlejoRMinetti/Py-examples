@@ -2,6 +2,9 @@
 Strings
 """
 
+# String .format()
+print('Monto total: ${:0,.2f}'.format(32581564456.365))
+
 # get substring
 a_string = "Hola Roberto mucho gusto"
 print(a_string[5:12])

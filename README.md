@@ -5,7 +5,7 @@
 ## Courses:
 ### Intro to Computer Science with Python - Udacity
 ### Relational Databases - Udacity
-### TensroFlow for Deep Learning - Udacity
+### TensorFlow for Deep Learning - Udacity
 ### Intel Edge - Udacity
 ### Deep Q Learning - Free Code Camp and others
 
