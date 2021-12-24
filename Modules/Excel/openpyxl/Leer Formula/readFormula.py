@@ -1,1 +1,0 @@
-# read formula example with openpyxl
