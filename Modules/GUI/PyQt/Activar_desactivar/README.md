@@ -23,5 +23,7 @@ py -3.9 -m pip install pyinstaller
 pyinstaller --clean --onefile --windowed app.py
 ```
 El ejecutable debe estar en el mismo directorio con el .ui
-## Convertion from .ui to .py
-"C:\Python37\Scripts\???.exe" mainwindow.ui > ui_mainwindow.py
+## Crear .py a partir del .ui
+```
+py -m PyQt5.uic.pyuic -x activar-desactivar.ui -o app-from-ui.py
+```
