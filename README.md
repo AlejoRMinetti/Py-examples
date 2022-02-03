@@ -15,6 +15,11 @@
 ### Python intermedio - Platzi
 
 
+##Dashboards
+###Data Studio de Google
+
+
+
 
 
 
