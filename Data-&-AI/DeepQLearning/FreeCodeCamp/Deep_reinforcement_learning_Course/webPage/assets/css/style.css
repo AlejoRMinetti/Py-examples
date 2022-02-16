@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+
+.illustration * {
+    max-width: 50%;
+}
+.social-proof * {
+	font-size: 1.2em;
+	list-style-type: none;
+}
+
+.card-overlay{
+margin-top: -80px;
+}
+
+.catch-image img {
+	max-width: 80%;
+	max-height:80%;
+}
+
+.card-shadow{
+	-webkit-box-shadow: 9px 8px 51px -3px rgba(23,21,23,0.5);
+-moz-box-shadow: 9px 8px 51px -3px rgba(23,21,23,0.5);
+box-shadow: 9px 8px 51px -3px rgba(23,21,23,0.5);
+}
+
+
+.syllabus {
+	background-color: rgb(251, 252, 253);
+	color: black;
+}
+
+a {
+    font-family: 'Lato';
+}
+
+.head_part * {
+	font-size: 3.3em!important;
+}
+
+/*****************************************************
+*                   General styles
+*****************************************************/
+
+
+.navbar-brand a {
+    font-family: 'Lato';
+}
+
+
+
+.nav-link a:hover
+{
+    color:#778492;
+}
+.center {
+    text-align: center;
+}
+.center img{
+    text-align: center!important;
+}
+
+.padding{
+    padding: 15px;
+}
+
+.video{
+    padding: 0px;
+}
+.red{
+    background-color: red;
+    height: 150px;
+}
+.blue{
+    background-color:blue;
+    height: 150px;
+}
+h1 {
+    font-family: 'Open Sans';
+    color:white;
+}
+
+h2 {
+    font-family: 'Open Sans';
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+li {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+}
+li a{
+
+    font-family: 'Open Sans', sans-serif;
+}
+/*****************************************************
+*                   Header section
+*****************************************************/
+/* Navbar */
+.navbar {
+    background: none !important;
+
+}
+.navbar * {
+    font-family: 'Lato';
+    color:white!important;
+}
+
+
+.header-section {
+	background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+
+}
+
+
+body, html {
+    height: 100%;
+}
+
+.center{
+    text-align: center!important;
+}
+
+
+
+
+
+.background-video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    z-index: -99;
+
+    /*width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #000;*/
+}
+.above-background-video {
+    z-index: 2;
+    text-align: center;
+    filter: blur(0px);
+}
+
+
+
+
+.about {
+    position: absolute;
+    height: 100vh;
+    top: 90%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+
+.above-background-video  p{
+    font-size: 1.2em;
+}
+
+.step2{
+
+
+}
+
+.logo {
+    font-family: 'Lato', sans-serif;
+}
+
+
+/*****************************************************
+*                   How it works section
+*****************************************************/
+.hiw-section{
+	background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+}
+
+.hiw-section a{
+	color:white;
+
+}
+
+.ressources * {
+    font-family: 'Open Sans', sans-serif;
+}
+/*****************************************************
+*                   Join section
+*****************************************************/
+.join-section p{
+    color:black;
+}
+/********************************
+Social icons
+*********************************/
+.social li {
+    display: inline;
+}
+.socialBig li {
+    display: inline;
+}
+.social-facebook a {
+    background-color: #3b5998;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-twitter a {
+    background-color: #1da1f2;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+.social-angelList a {
+    background-color: #34bf49;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+.social-productHunt a {
+    background-color: #da552f;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-stackoverflow a {
+    background-color: #fe7a15;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-stackoverflow a {
+    background-color: #fe7a15;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-email a {
+    background-color: #34bf49;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+
+.social-github a {
+    background-color: #333;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-quora a {
+    background-color: #a82400;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-twitchBig a {
+    background-color: #6441a5;
+    width: 108px;
+    height: 108px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-youtubeBig a {
+    background-color: #ff0000;
+    width: 108px;
+    height: 108px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-twitch a {
+    background-color: #6441a5;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+
+.social-youtube a {
+    background-color: #ff0000;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+}
+.social a:hover {
+    filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+}
+
+.social a .fa {
+    font-size: 25px;
+    padding-top: 14px;
+}
+
+.socialBig a .fa {
+    font-size: 50px;
+    padding-top: 28px;
+}
+.socialBig a:hover {
+   filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+}
+
+
+
+/*****************************************************
+*                   Footer
+*****************************************************/
+
+footer p{
+
+    font-family: 'Press Start 2P', cursive!important;
+    font-size: 0.9em;
+}
+
+
+footer{
+    background-color:rgb(39,40,34);
+}
+
+footer a{
+    color: white!important;
+}
