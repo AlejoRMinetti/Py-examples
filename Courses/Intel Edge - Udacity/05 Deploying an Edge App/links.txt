@@ -1,9 +1,0 @@
-OpenCV:
-https://docs.opencv.org/master/d9/df8/tutorial_root.html
-MQTT:
-http://mqtt.org/ 
-https://internetofthingsagenda.techtarget.com/definition/MQTT-MQ-Telemetry-Transport
-FFmpeg:
-https://www.ffmpeg.org/
-Perfomance improvement:
-https://docs.openvinotoolkit.org/2019_R3/_docs_IE_DG_Intro_to_Performance.html

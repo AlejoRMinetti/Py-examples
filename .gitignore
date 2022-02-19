@@ -1,1 +1,6 @@
 .vscode/
+
+# data
+*.xlsx
+*.xls
+*.csv
