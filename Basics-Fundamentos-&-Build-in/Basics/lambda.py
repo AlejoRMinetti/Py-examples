@@ -1,4 +1,4 @@
-// funcion corta que se define en el momento, siendo anonima
+# funcion corta que se define en el momento, siendo anonima
 def my_func(f, arg):
   return f(arg)
 
