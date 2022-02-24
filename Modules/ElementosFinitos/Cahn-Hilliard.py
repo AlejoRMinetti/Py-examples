@@ -8,4 +8,13 @@ phi.setValue(GaussianNoiseVariable(mesh=mesh,
 PHI = phi.getArithmeticFaceValue()
 D = a = epsilon = 1.
 eq = (TransientTerm() == DiffusionTerm(coeff=D * a**2 * (1 - 6 * PHI * (1 - PHI))) - 
-DiffusionTerm(coeff=(D, epsilon**2)))viewer = Viewer(vars=(phi,), datamin=0., datamax=1.)dexp = -5elapsed = 0.while elapsed < 1000.:    dt = min(100, exp(dexp))    elapsed += dt    dexp += 0.01    eq.solve(phi, dt=dt)    viewer.plot()
+DiffusionTerm(coeff=(D, epsilon**2)))
+viewer = Viewer(vars=(phi,), datamin=0., datamax=1.)
+dexp = -5
+elapsed = 0.
+while elapsed < 1000.:
+    dt = min(100, exp(dexp))
+    elapsed += dt
+    dexp += 0.01
+    eq.solve(phi, dt=dt)
+    viewer.plot()
