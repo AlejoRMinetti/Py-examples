@@ -1,16 +1,16 @@
 ######## ejemplos diccionarios
 # Dictionary van con {}, tuples van con () y listas con []
 
-# print key and sub dictionary
-for key, value in mydic.iteritems() :
-  print key, value
-
-# key in a dictionary
 nums = {
   1: "one",
   2: "two",
   3: "three",
 }
+# print key and sub dictionary
+for key, value in muns.items() :
+  print(key, value)
+
+# key in a dictionary
 print(1 in nums)
 print("three" in nums)
 print(4 not in nums)
