@@ -1,0 +1,4 @@
+Links = //h2[@class="headline"]/a/@href
+Título = //h1[@class="headline"]/a/text()
+Resumen = //div[@class="lead"]/p/text()
+Cuerpo = //div[@class="articleWrapper  "]/p[not(@class)]/text()
