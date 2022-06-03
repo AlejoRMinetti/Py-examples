@@ -5,10 +5,12 @@ import datetime
 
 HOME_URL = 'https://www.larepublica.co/'
 
-XPATH_LINK_TO_ARTICLE = '//h2[@class="headline"]/a/@href'
-XPATH_TITLE = '//h1[@class="headline"]/a/text()'
+XPATH_LINK_TO_ARTICLE = '//div[@class="news V_Title_Img"]/a[1]/@href'
+XPATH_TITLE = '//div[@class="mb-auto"]/span/text()'
+## XPATH_TITLE funciona en el navegador pero no en el script, lo deje con la categoria
+# XPATH_TITLE = '//div[@class="mb-auto"]/span/text()'
 XPATH_SUMMARY = '//div[@class="lead"]/p/text()'
-XPATH_BODY = '//div[@class="articleWrapper  "]/p[not(@class)]/text()'
+XPATH_BODY = '//div[@class="html-content"]/p/text()'
 
 
 def parse_notice(link, today):
@@ -17,9 +19,9 @@ def parse_notice(link, today):
         if response.status_code == 200:
             notice = response.content.decode('utf-8')
             parsed = html.fromstring(notice)
-
             try:
                 title = parsed.xpath(XPATH_TITLE)[0]
+                print(title)
                 title = title.replace('\"', '')
                 summary = parsed.xpath(XPATH_SUMMARY)[0]
                 body = parsed.xpath(XPATH_BODY)
@@ -45,13 +47,15 @@ def parse_home():
         response = requests.get(HOME_URL)
         if response.status_code == 200:
             home = response.content.decode('utf-8')
-            parsed = html.fromstring(home)
+            # Parsear el contenido de la página para extraer los datos con XPATH
+            parsed = html.fromstring(home) 
             links_to_notices = parsed.xpath(XPATH_LINK_TO_ARTICLE)
-            # print(links_to_notices)
+            print(links_to_notices)
 
             today = datetime.date.today().strftime('%d-%m-%Y')
             if not os.path.isdir(today):
                 os.mkdir(today)
+        
 
             for link in links_to_notices:
                 parse_notice(link, today)
@@ -67,3 +71,4 @@ def run():
 
 if __name__ == '__main__':
     run()
+    
