@@ -1,0 +1,15 @@
+.DS_Store
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+venv
+.ipynb_checkpoints
+.projectignore
+*.session
+anaconda-project.yml
+*.json
+*.ipynb
+config.ini
