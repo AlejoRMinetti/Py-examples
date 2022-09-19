@@ -16,13 +16,12 @@ c.execute(query)
 rows = c.fetchall()
 
 # First, what data structure did we get?
-print "Row data:"
-print rows
+print("Row data:")
+print(rows)
 
 # And let's loop over it too:
-print
-print "Student names:"
+print("Student names:")
 for row in rows:
-  print "  ", row[0]+",     id:", row[1]
+  print("  ", row[0]+",     id:", row[1])
 
 db.close()
