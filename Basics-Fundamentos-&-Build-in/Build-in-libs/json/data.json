@@ -1,0 +1,7 @@
+{   "people1":[
+    { "name":"John", "age":30, "city":"New York"},
+    { "name":"CHAMA", "age":35, "city":"Gral. Rodriguez"}
+    ],
+    "people2":
+    [{ "name":"Borra", "age":34, "city":"Japan"}]
+}
