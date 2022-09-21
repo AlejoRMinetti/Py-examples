@@ -23,7 +23,7 @@ class DateTimeEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, o)
 
 
-if __name__ == "__main__":
+def connectTelegram():
     # Reading Configs
     config = configparser.ConfigParser()
     config.read("config.ini")
@@ -38,8 +38,10 @@ if __name__ == "__main__":
     username = config['Telegram']['username']
 
     # Create the client and connect
-    client = TelegramClient(username, api_id, api_hash)
+    return TelegramClient(username, api_id, api_hash)
 
+
+def readMessages(client):
     async def main(phone):
         await client.start()
         print("Client Created")
@@ -61,7 +63,7 @@ if __name__ == "__main__":
             entity = user_input_channel
 
         my_channel = await client.get_entity(entity)
-
+        
         offset_id = 0
         limit = 100
         all_messages = []
@@ -90,8 +92,14 @@ if __name__ == "__main__":
             if total_count_limit != 0 and total_messages >= total_count_limit:
                 break
 
-        with open('channel_messages.json', 'w') as outfile:
-            json.dump(all_messages, outfile, cls=DateTimeEncoder)
+    with open('channel_messages.json', 'w') as outfile:
+        json.dump(all_messages, outfile, cls=DateTimeEncoder)
 
     with client:
         client.loop.run_until_complete(main(phone))
+
+
+if __name__ == "__main__":
+    client = connectTelegram()
+    readMessages(client)
+    
