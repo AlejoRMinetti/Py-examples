@@ -30,22 +30,71 @@ class TelegramChannel():
 
     def connect(self):
         # Reading Configs
-        self.config = configparser.ConfigParser()
-        self.config.read("config.ini")
+        config = configparser.ConfigParser()
+        config.read("config.ini")
 
         # Setting configuration values
-        self.api_id = self.config['Telegram']['api_id']
-        self.api_hash = self.config['Telegram']['api_hash']
+        api_id = config['Telegram']['api_id']
+        api_hash = config['Telegram']['api_hash']
+        api_hash = str(api_hash)
 
-        self.api_hash = str(self.api_hash)
-
-        self.phone = self.config['Telegram']['phone']
-        self.username = self.config['Telegram']['username']
+        self.phone = config['Telegram']['phone']
+        self.username = config['Telegram']['username']
 
         # Create the client and connect
-        self.client = TelegramClient(self.username, self.api_id, self.api_hash)
+        print('connecting to telegram as:',self.username)
+        if config['Telegram']['proxyUrl']:
+            print('connecting using proxy...',config['Telegram']['proxyMethod'],
+                                         config['Telegram']['proxyUrl'],
+                                         config['Telegram']['proxyPort'])
+            self.client = TelegramClient(self.username, api_id, api_hash,
+                                         proxy=(config['Telegram']['proxyMethod'],
+                                         config['Telegram']['proxyUrl'],
+                                         int(config['Telegram']['proxyPort'])))
+        else:
+            self.client = TelegramClient(self.username, api_id, api_hash)
 
-    async def getMessages(self, total_count_limit=200):
+    async def getLastMessage(self,add_offset=0):
+        await self.client.start()
+        # print("Client Created")
+        # Ensure you're authorized
+        if await self.client.is_user_authorized() == False:
+            await self.client.send_code_request(self.phone)
+            try:
+                await self.client.sign_in(self.phone, input('Enter the code: '))
+            except SessionPasswordNeededError:
+                await self.client.sign_in(password=input('Password: '))
+
+        self.me = await self.client.get_me()
+
+        if self.urlChannel == None:
+            self.urlChannel = input('enter entity(telegram URL or entity id):')
+
+        if self.urlChannel.isdigit():
+            entity = PeerChannel(int(self.urlChannel))
+        else:
+            entity = self.urlChannel
+
+        self.my_channel = await self.client.get_entity(entity)
+
+        self.offset_id = 0
+        all_messages = []
+        self.total_messages = 0
+
+        history = await self.client(GetHistoryRequest(
+            peer=self.my_channel,
+            offset_id=self.offset_id,
+            offset_date=None,
+            add_offset=add_offset,
+            limit=1,
+            max_id=0,
+            min_id=0,
+            hash=0
+        ))
+        return history.messages
+
+
+    async def getMessagesToJSON(self, total_count_limit=200):
         # total_count_limit = 0 (no limit, get all messages)
 
         await self.client.start()
