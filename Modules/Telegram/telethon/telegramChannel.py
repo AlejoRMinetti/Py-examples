@@ -43,7 +43,7 @@ class TelegramChannel():
 
         # Create the client and connect
         print('connecting to telegram as:',self.username)
-        if config['Telegram']['proxyUrl']:
+        if config['Telegram'].get('proxyUrl'):
             print('connecting using proxy...',config['Telegram']['proxyMethod'],
                                          config['Telegram']['proxyUrl'],
                                          config['Telegram']['proxyPort'])
