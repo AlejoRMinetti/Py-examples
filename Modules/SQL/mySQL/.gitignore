@@ -1,0 +1,13 @@
+*.xlsx
+*.xls
+*.csv
+data/
+
+# virtual env
+venv/
+
+# python
+__pycache__/
+
+# myDB credentials
+dbCredentials.py
