@@ -1,0 +1,9 @@
+.vscode/
+
+# data
+*.xlsx
+*.xls
+*.csv
+
+# checkpoint
+*.h5
