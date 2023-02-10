@@ -1,0 +1,8 @@
+.vscode/
+venv
+
+# data
+*.xlsx
+*.xls
+*.csv
+*.pdf
