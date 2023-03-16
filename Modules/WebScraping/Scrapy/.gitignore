@@ -1,0 +1,10 @@
+__pycache__
+venv
+
+.vscode/
+
+# data
+*.xlsx
+*.xls
+*.csv
+*.html
